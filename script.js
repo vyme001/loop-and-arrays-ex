@@ -9,10 +9,11 @@ function camelize(str){
     return str.split("-").map((word, index) => index === 0 ? word : word[0].toUpperCase().concat(word.slice(1))).join("");
 };
 
-console.log(camelize(str));
+// console.log(camelize(str));
 
 
 // ex-2
+//filter range
 
 const arr = [2, 3, 1, 0, 54, 2];
 const arr2 = [5, 3, 8, 1];
@@ -27,5 +28,28 @@ function filterRange(arr, a, b){
     return arr.filter((item)=> item >= a && item <= b)
 };
 
-console.log(filterRange(arr, 2, 7));
-console.log(filterRange(arr2, 1, 4));
+// console.log(filterRange(arr, 2, 7));
+// console.log(filterRange(arr2, 1, 4));
+
+
+
+// ex-3
+// filter range "in-place"
+/*
+remove all elements from the array that arent in a given range
+*/
+const arr3 = [5, 3, 8, 1];
+
+function filterRangeInPlace(arr, a, b){
+    for(let i = 0; i < arr.length; i++){
+        let val = arr[i];
+
+        if(val > a || val < b){
+            arr.splice(i, i);
+            i--;
+        };
+    };
+};
+
+
+filterRangeInPlace(arr3, 1, 4)
