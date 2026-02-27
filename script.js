@@ -38,7 +38,7 @@ function filterRange(arr, a, b){
 /*
 remove all elements from the array that arent in a given range
 */
-const arr3 = [5, 3, 8, 1];
+const arr3 = [5, 3, 8, 1];//
 
 function filterRangeInPlace(arr, a, b){
     for(let i = 0; i < arr.length; i++){
@@ -52,4 +52,18 @@ function filterRangeInPlace(arr, a, b){
 };
 
 
-filterRangeInPlace(arr3, 1, 4)
+// filterRangeInPlace(arr3, 1, 4)
+
+// ex4
+
+/*
+sort array in decreasing order
+touches on the importance of understanding anonymous/callback functions 
+*/
+const arr4 = [5, 2, 1, -10, 8];
+function descendArr(arr){
+    arr.sort();
+};
+
+descendArr(arr4);
+console.log(arr4);
