@@ -59,11 +59,14 @@ function filterRangeInPlace(arr, a, b){
 /*
 sort array in decreasing order
 touches on the importance of understanding anonymous/callback functions 
+be mindful that expression results vary with browsers
 */
 const arr4 = [5, 2, 1, -10, 8];
+
 function descendArr(arr){
-    arr.sort();
+    arr.sort((a, b)=> a < b ? 1 : 0);
 };
 
 descendArr(arr4);
 console.log(arr4);
+
