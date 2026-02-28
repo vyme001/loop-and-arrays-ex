@@ -19,7 +19,7 @@ const arr = [2, 3, 1, 0, 54, 2];
 const arr2 = [5, 3, 8, 1];
 
 /*
-receives an array
+function receives an array
 looks for an element >= a && <= b
 returns a result as an array
 */
@@ -36,7 +36,7 @@ function filterRange(arr, a, b){
 // ex-3
 // filter range "in-place"
 /*
-remove all elements from the array that arent in a given range
+remove all elements from the original array that arent in a given range
 */
 const arr3 = [5, 3, 8, 1];//
 
@@ -63,10 +63,51 @@ be mindful that expression results vary with browsers
 */
 const arr4 = [5, 2, 1, -10, 8];
 
-function descendArr(arr){
-    arr.sort((a, b)=> a < b ? 1 : 0);
+function decreaseArr(arr){
+    arr.sort((a, b) => a > b ? 0 : 1);
 };
 
-descendArr(arr4);
-console.log(arr4);
+decreaseArr(arr4);
 
+
+
+//copy and sort
+let arr0 = ["HTML","JavaScript","CSS"];
+
+function copySorted(arr){
+    return arr.toSorted()
+    
+}
+
+let sorted = copySorted(arr0);
+
+sorted
+
+
+// shuffle array
+/*
+*/
+let arr5 = [1, 2, 3, 4, 5];
+function shuffleArr(arr){
+    arr5.sort(()=> Math.random() * 0.5)
+}
+
+
+//Filter unique array members
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+function unique(arr){
+        return arr.reduce((arr, curr) =>{
+            if(!arr.includes(curr)){
+                arr.unshift(curr)
+            };
+            return arr;
+        },[]);
+}
+
+let result = unique(strings);
+console.log(result);
+
+//
